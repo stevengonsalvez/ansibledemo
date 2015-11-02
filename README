@@ -1,0 +1,31 @@
+
+web servers
+
+ansible-playbook playbooks/webservers.yml -vv -i hosts -l webservers -u vagrant --private-key ~/.vagrant.d/insecure_private_key -s
+
+
+Jenkins
+
+ansible-playbook playbooks/jenkins.yml -vv -i hosts -l jenkins -u vagrant --private-key ~/.vagrant.d/insecure_private_key -s
+
+
+
+--syntax-check
+
+--check
+
+
+
+ansible -i hosts.testing testing  -a "/sbin/reboot"  -u vagrant --private-key ~/.vagrant.d/insecure_private_key -s
+
+ansible-playbook playbooks/playbook.yml  -i hosts -u vagrant --private-key ~/.vagrant.d/insecure_private_key -s
+
+ansible-playbook -vvvv  playbook.yml -u ubuntu -i "localhost", -c local
+
+ansible-playbook -vvvv  playbook.yml  -i "localhost", -c local
+
+
+
+VagrantBox
+
+ vagrant init p0bailey/centos-6-6-small; vagrant up --provider virtualbox

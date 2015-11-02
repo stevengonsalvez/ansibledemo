@@ -1,0 +1,11 @@
+---
+# tasks file for tomcat-cento6
+
+- name: install the latest version of Tomcat
+  yum: name=tomcat6 state=latest
+
+- name: install the latest version of Tomcat webapps
+  yum: name=tomcat6-webapps state=latest
+
+- name: Start Tomcat
+  service: name=tomcat6 state=started enabled=yes
